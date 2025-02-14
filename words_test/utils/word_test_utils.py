@@ -4,7 +4,7 @@ class Word_Utils():
     def nombre_mot(self,phrase):
         words = []
         for word in phrase.split():
-            words.extend(word.split("’"))
+            words.extend(word.split("'"))
         return words, len(words)
 
     def nombre_char(self,words):
