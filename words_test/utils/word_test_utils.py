@@ -2,7 +2,9 @@
 
 class Word_Utils():
     def nombre_mot(self,phrase):
-        words = phrase.split()
+        words = []
+        for word in phrase.split():
+            words.extend(word.split("’"))
         return words, len(words)
 
     def nombre_char(self,words):
@@ -43,7 +45,7 @@ class Word_Utils():
         char = self.nombre_char(words)
         l = self.occurence_frequency(words)
         my_dict = {
-            'nombre de mot': nbr,
+            'nombre de mots': nbr,
             'nombre de char': char,
             'les 3 mots les plus fréquents': l
         }
